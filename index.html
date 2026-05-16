@@ -2,43 +2,135 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Maciej Siemiski</title>
+<title>Maciej Sieminski</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
-         max-width: 640px; margin: 64px auto; padding: 0 24px; color: #1c1917; line-height: 1.6; }
-  h1 { font-size: 22px; margin: 0 0 12px; }
-  ul { padding-left: 20px; }
-  a { color: #2563eb; }
-  small { color: #78716c; }
+  :root {
+    color-scheme: light;
+    --ink: #191716;
+    --muted: #6f6761;
+    --line: #e7e0da;
+    --panel: #f8f5f2;
+    --link: #205fdd;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+    margin: 0;
+    color: var(--ink);
+    background: #fffdfa;
+    line-height: 1.55;
+  }
+  main { width: min(1120px, calc(100% - 40px)); margin: 52px auto 64px; }
+  h1 { font-size: clamp(28px, 5vw, 54px); line-height: 1.02; margin: 0 0 12px; letter-spacing: 0; max-width: 840px; }
+  h2 { font-size: 18px; margin: 42px 0 16px; }
+  p { max-width: 760px; margin: 0 0 16px; color: var(--muted); }
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin: 20px 0 36px; }
+  .app {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--panel);
+    overflow: hidden;
+    min-height: 100%;
+  }
+  .app img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1320 / 2868;
+    object-fit: cover;
+    object-position: top center;
+    border-bottom: 1px solid var(--line);
+    background: #eee8e1;
+  }
+  .app-body { padding: 14px; }
+  .app h3 { font-size: 16px; line-height: 1.2; margin: 0 0 6px; }
+  .app p { font-size: 13px; margin: 0 0 10px; color: var(--muted); }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; font-size: 13px; }
+  .home-assistant ul { padding-left: 20px; margin-top: 8px; }
+  .home-assistant li { margin: 5px 0; }
+  small { color: var(--muted); }
 </style>
 </head>
 <body>
-<h1>Maciej Siemiski — independent mobile &amp; Home Assistant developer</h1>
+<main>
+  <h1>Independent mobile and Home Assistant software by Maciej Sieminski.</h1>
+  <p>Privacy-focused utility apps, family tools, and Home Assistant extensions built for everyday use.</p>
 
-<h2 style="font-size:16px;margin:24px 0 8px;">Mobile apps</h2>
-<ul>
-  <li><a href="https://apps.apple.com/app/id6762611455">Mote — Everyday Appreciation</a> · <a href="/mote-privacy/">privacy policy</a></li>
-  <li><a href="https://apps.apple.com/app/id6740893316">Compresser — file utility</a></li>
-  <li>Moje Szczepienia · Archvr · DeMotion (in tester)</li>
-</ul>
+  <h2>Mobile Apps</h2>
+  <section class="apps" aria-label="Mobile apps">
+    <article class="app">
+      <img src="/assets/mobile-apps/archivr.png" alt="Archivr app preview">
+      <div class="app-body">
+        <h3>Archivr</h3>
+        <p>Pack, lock, and manage archives on mobile.</p>
+        <div class="links">
+          <a href="https://apps.apple.com/app/id6768043511">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.macsiem.archivr">Google Play</a>
+        </div>
+      </div>
+    </article>
+    <article class="app">
+      <img src="/assets/mobile-apps/vaxjournal.png" alt="VaxJournal app preview">
+      <div class="app-body">
+        <h3>Moje Szczepienia</h3>
+        <p>Private family vaccination journal, stored locally.</p>
+        <div class="links">
+          <a href="https://apps.apple.com/app/id6763629936">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.mojeszczepienia.app">Google Play</a>
+          <a href="/szczepienia-privacy/">Privacy</a>
+        </div>
+      </div>
+    </article>
+    <article class="app">
+      <img src="/assets/mobile-apps/mote.png" alt="Mote app preview">
+      <div class="app-body">
+        <h3>Mote</h3>
+        <p>Everyday appreciation and thoughtful moments.</p>
+        <div class="links">
+          <a href="https://apps.apple.com/app/id6762611455">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.mojemote.app">Google Play</a>
+          <a href="/mote-privacy/">Privacy</a>
+        </div>
+      </div>
+    </article>
+    <article class="app">
+      <img src="/assets/mobile-apps/compresser.png" alt="Compresser app preview">
+      <div class="app-body">
+        <h3>Compresser</h3>
+        <p>Compress and convert files with local-first defaults.</p>
+        <div class="links">
+          <a href="https://apps.apple.com/app/id6762507568">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.compresser.app">Google Play</a>
+          <a href="/compresser-privacy/">Privacy</a>
+        </div>
+      </div>
+    </article>
+    <article class="app">
+      <img src="/assets/mobile-apps/demotion.png" alt="DeMotion app preview">
+      <div class="app-body">
+        <h3>DeMotion</h3>
+        <p>Strip Live Photos down to still images.</p>
+        <div class="links">
+          <a href="https://apps.apple.com/app/id6765819998">App Store</a>
+        </div>
+      </div>
+    </article>
+  </section>
 
-<h2 style="font-size:16px;margin:24px 0 8px;">Home Assistant — HACS-ready cards &amp; integrations</h2>
-<p>28+ public Lovelace cards and Python integrations for Home Assistant. Browse the full set on <a href="https://github.com/MacSiem?tab=repositories&amp;q=ha-&amp;type=public">GitHub (ha-* repos)</a>.</p>
-<ul>
-  <li><a href="https://github.com/MacSiem/ha-sentence-manager">ha-sentence-manager</a> — custom voice sentences manager for HA Assist (Python integration + bundled card, v5)</li>
-  <li><a href="https://github.com/MacSiem/ha-network-map">ha-network-map</a> — local network device map with server-side TCP probe (Python integration + card, v5)</li>
-  <li><a href="https://github.com/MacSiem/ha-trace-viewer">ha-trace-viewer</a> — browse, inspect and export automation execution traces</li>
-  <li><a href="https://github.com/MacSiem/ha-automation-analyzer">ha-automation-analyzer</a> — automation performance analyzer</li>
-  <li><a href="https://github.com/MacSiem/ha-data-exporter">ha-data-exporter</a> — entity export to CSV/JSON/YAML</li>
-  <li><a href="https://github.com/MacSiem/ha-energy-optimizer">ha-energy-optimizer</a> — energy usage analysis and optimization</li>
-  <li><a href="https://github.com/MacSiem/ha-smart-reports">ha-smart-reports</a> — energy, automation and system health reports</li>
-  <li><a href="https://github.com/MacSiem/ha-device-health">ha-device-health</a> — battery, network and device alerts</li>
-  <li><a href="https://github.com/MacSiem/ha-frigate-privacy">ha-frigate-privacy</a> — Frigate camera privacy mode</li>
-  <li><a href="https://github.com/MacSiem/ha-baby-tracker">ha-baby-tracker</a> · <a href="https://github.com/MacSiem/ha-chore-tracker">ha-chore-tracker</a> · <a href="https://github.com/MacSiem/ha-claude-assistant">ha-claude-assistant</a></li>
-</ul>
+  <section class="home-assistant">
+    <h2>Home Assistant</h2>
+    <p>HACS-ready Lovelace cards and Python integrations for local automations, diagnostics, and household workflows.</p>
+    <ul>
+      <li><a href="https://github.com/MacSiem/ha-sentence-manager">ha-sentence-manager</a> — custom voice sentences manager for HA Assist</li>
+      <li><a href="https://github.com/MacSiem/ha-network-map">ha-network-map</a> — local network device map with server-side TCP probe</li>
+      <li><a href="https://github.com/MacSiem/ha-trace-viewer">ha-trace-viewer</a> — browse, inspect, and export automation traces</li>
+      <li><a href="https://github.com/MacSiem?tab=repositories&amp;q=ha-&amp;type=public">More Home Assistant projects on GitHub</a></li>
+    </ul>
+  </section>
 
-<p>Contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
-<p><small>This page hosts <a href="/app-ads.txt">app-ads.txt</a> for AdMob publisher pub-5353750048775501.</small></p>
+  <p>Contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
+  <p><small>This page hosts <a href="/app-ads.txt">app-ads.txt</a> for AdMob publisher pub-5353750048775501.</small></p>
+</main>
 </body>
 </html>
