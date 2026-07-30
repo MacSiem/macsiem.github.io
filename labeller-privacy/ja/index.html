@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー — Labeller</title>
+    <link rel="canonical" href="https://macsiem.github.io/labeller-privacy/ja/">
+    <link rel="alternate" hreflang="de" href="https://macsiem.github.io/labeller-privacy/de/">
+    <link rel="alternate" hreflang="en" href="https://macsiem.github.io/labeller-privacy/en/">
+    <link rel="alternate" hreflang="es" href="https://macsiem.github.io/labeller-privacy/es/">
+    <link rel="alternate" hreflang="fr" href="https://macsiem.github.io/labeller-privacy/fr/">
+    <link rel="alternate" hreflang="ja" href="https://macsiem.github.io/labeller-privacy/ja/">
+    <link rel="alternate" hreflang="ko" href="https://macsiem.github.io/labeller-privacy/ko/">
+    <link rel="alternate" hreflang="pl" href="https://macsiem.github.io/labeller-privacy/pl/">
+    <link rel="alternate" hreflang="pt-BR" href="https://macsiem.github.io/labeller-privacy/pt/">
+    <link rel="alternate" hreflang="zh-CN" href="https://macsiem.github.io/labeller-privacy/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://macsiem.github.io/labeller-privacy/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fafafa; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #fff; }
+        h1 { color: #C25F0B; margin-top: 30px; margin-bottom: 12px; font-size: 2.4em; }
+        h1:first-of-type { margin-top: 0; }
+        h2 { color: #C25F0B; margin-top: 30px; margin-bottom: 14px; font-size: 1.5em; }
+        h3 { color: #C25F0B; margin-top: 20px; margin-bottom: 10px; font-size: 1.15em; }
+        p { margin-bottom: 14px; text-align: justify; }
+        ul, ol { margin-left: 25px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+        a { color: #C25F0B; text-decoration: none; border-bottom: 1px solid #C25F0B; }
+        a:hover { color: #C25F0B; border-bottom-color: #C25F0B; }
+        strong { color: #C25F0B; }
+        code { background: #f3f4f6; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
+        table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #e5e7eb; padding: 8px 12px; vertical-align: top; }
+        th { background: #f9fafb; text-align: left; color: #C25F0B; }
+        td a { word-break: break-all; }
+        .lang-switcher { text-align: center; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.92em; line-height: 1.9; }
+        .lang-switcher a { margin: 0 4px; font-weight: 500; border-bottom: none; }
+        .lang-switcher a:hover { text-decoration: underline; }
+        .lang-switcher .active { color: #333; font-weight: 700; cursor: default; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #666; font-size: 0.9em; }
+        footer a { color: #666; border-bottom-color: #ccc; }
+        [dir=rtl] p { text-align: justify; }
+        [dir=rtl] ul, [dir=rtl] ol { margin-right: 25px; margin-left: 0; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <a href="../de/">Deutsch</a> · <a href="../en/">English</a> · <a href="../es/">Español</a> · <a href="../fr/">Français</a> · <a class="active">日本語</a> · <a href="../ko/">한국어</a> · <a href="../pl/">Polski</a> · <a href="../pt/">Português (BR)</a> · <a href="../zh/">简体中文</a>
+    </div>
+
+    <h1>プライバシーポリシー — Labeller</h1>
+    <p>最終更新日：2026-07-30</p>
+
+    <h2>1. Labellerについて</h2>
+    <p><strong>Labeller: Batch Photo Labels</strong>（<code>dev.macsiem.labeller</code>）では、端末から複数の写真を選び、テキストボックス、フリーハンド描画、図形、マスキングを追加したうえで、元の写真を上書きする、注釈付きのコピーを保存する、または編集を破棄することができます。</p>
+    <p>発行者：<strong>Maciej Siemiński</strong> · ウェブサイト：<a href="https://macsiem.dev/">MacSiem.dev</a> · 連絡先：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
+
+    <h2>2. わかりやすい概要</h2>
+    <p>写真が端末の外に出ることはありません。写真の選択、編集、最終的なレンダリングはすべて端末内で行われます。Labellerにはアカウントやログイン、アプリ用サーバー、クラウド同期、端末間の連携、ユーザー間でのデータ共有はありません。端末外に送信されるのは、第10節および第11節に記載する限定的なクラッシュ・エラー診断データだけです。</p>
+
+    <h2>3. 端末内での写真処理</h2>
+    <p>Labellerは、システムのフォトピッカーまたは写真ライブラリの権限を通じてお客様が選択した写真を処理します。選択した画像と、すべてのテキストボックス、描画、図形、マスキングは端末内で処理されます。写真の内容がアップロードまたは送信されることはありません。</p>
+
+    <h2>4. 元の写真の上書き</h2>
+    <p><strong>Labellerは写真ライブラリを変更できます。</strong> 保存のたびに、注釈付き画像を元の写真に上書きするかどうかをお客様が明示的に選択します。この操作には、該当するシステム権限も必要です。</p>
+    <ul>
+        <li><strong>iOS：</strong>編集後の画像は元の写真アセットに書き戻されます。元の写真は、写真アプリ固有の<em>オリジナルに戻す</em>機能で復元できます。</li>
+        <li><strong>Android：</strong>上書きするとファイルが置き換えられます。操作を実行する前に、Androidのシステムダイアログで対象の一括処理を確認するよう求められます。</li>
+    </ul>
+
+    <h2>5. コピーの保存または編集の破棄</h2>
+    <p>保存方法は毎回お客様が選択します。<strong>コピーとして保存</strong>を選ぶと、注釈付きのコピーが作成され、元の写真は変更されません。編集を破棄した場合、編集後の画像は写真ライブラリに書き込まれません。</p>
+
+    <h2>6. 端末に保存されるコレクション</h2>
+    <p>Labellerは、写真の一括セットとその注釈からなるコレクションを端末内に保存します。コレクションは、お客様が削除すると消去されます。アプリを削除すると、すべてのコレクションが削除されます。</p>
+
+    <h2>7. iOSでの写真アクセス</h2>
+    <p>iOS版は、写真ライブラリへのアクセス目的を示す次のシステム項目を使用します。</p>
+    <ul>
+        <li><code>NSPhotoLibraryUsageDescription</code> — 写真ライブラリから写真を選び、編集できるようにするため。</li>
+        <li><code>NSPhotoLibraryAddUsageDescription</code> — 注釈付きコピーを保存するため、またはお客様が選択した場合に編集後の画像を選択したアセットへ書き戻すため。</li>
+    </ul>
+
+    <h2>8. Androidでの写真アクセス</h2>
+    <p>Android版は、次の権限により写真へアクセスします。</p>
+    <ul>
+        <li><code>READ_MEDIA_IMAGES</code> — 選択した写真を扱うために必要な場合の画像アクセス。</li>
+        <li><code>READ_MEDIA_VISUAL_USER_SELECTED</code> — システムのフォトピッカーでお客様が選んだ写真へのアクセス。</li>
+    </ul>
+
+    <h2>9. ブロックされている権限と識別子</h2>
+    <p>Labellerのマニフェストでは、位置情報、連絡先、マイク、画面オーバーレイ、広告IDに関する権限を明示的にブロックしています。Labellerはこれらの機能を使用しません。</p>
+
+    <h2>10. クラッシュとエラーの診断</h2>
+    <p>Labellerは、<code>maciej-sieminski</code>組織の<code>labeller</code>プロジェクトを使用して、クラッシュとエラーを<strong>Sentry</strong>へ報告します。診断レポートには、端末モデル、OSのバージョン、アプリのバージョン、技術的なスタックトレースが含まれる場合があります。これらのレポートは、アプリのクラッシュとエラーを特定するために使用されます。</p>
+
+    <h2>11. Sentryに送信されないもの</h2>
+    <p>LabellerのSentry連携は、画像パスとキャプションのテキストを診断レポートから除去します。写真やキャプションの内容がSentryへ送信されることはありません。画像パスと注釈テキストも送信されません。</p>
+
+    <h2>12. アカウント、サーバー、ユーザー間機能</h2>
+    <p>Labellerにはアカウントもログインもありません。アプリ用サーバー、クラウド同期、端末を連携する機能、ユーザー間でデータを転送する機能もありません。お客様のローカルコレクションが別のユーザーに転送されることはありません。</p>
+
+    <h2>13. 広告とトラッキング</h2>
+    <p>現在のバージョンのLabellerには広告がなく、App Tracking Transparencyのプロンプトは表示されず、広告IDも使用されません。</p>
+
+    <h2>14. アプリ内購入</h2>
+    <p>現在のバージョンのLabellerでは、アプリ内購入は有効になっていません。</p>
+
+    <h2>15. 保存期間と保存方法の選択</h2>
+    <p>写真は、お客様が選んだ方法に従ってシステムの写真ライブラリに残ります。選択した元の写真を上書きする、元の写真を変更せずに注釈付きコピーを保存する、または編集を破棄することができます。コレクションとその注釈は、お客様がコレクションまたはアプリを削除するまで端末内だけに残ります。</p>
+
+    <h2>16. お問い合わせとポリシーの日付</h2>
+    <p>本ポリシーに関するお問い合わせは、<strong>Maciej Siemiński</strong>（<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>）までご連絡ください。本ポリシーの最終更新日は2026-07-30です。</p>
+    <p>正規版：<a href="https://macsiem.github.io/labeller-privacy/">https://macsiem.github.io/labeller-privacy/</a></p>
+
+    <footer>© 2026 Maciej Siemiński · <a href="https://macsiem.dev/">MacSiem.dev</a> · <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> · <a href="https://macsiem.github.io/labeller-privacy/">macsiem.github.io/labeller-privacy/</a></footer>
+</div>
+</body>
+</html>
