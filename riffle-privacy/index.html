@@ -29,73 +29,93 @@
 
     <section id="pl" lang="pl">
         <h1>Polityka prywatności — Riffle</h1>
-        <p><strong>Ostatnia aktualizacja: 2026-07-28</strong></p>
+        <p><strong>Ostatnia aktualizacja: 2026-07-31</strong></p>
 
-        <div class="note">Riffle nie ma serwera. Wszystko, co dodasz do aplikacji, zostaje na Twoim urządzeniu.</div>
+        <div class="note">Domyślnie Riffle działa w całości na Twoim urządzeniu i nie potrzebuje serwera. Jedyny wyjątek to <strong>opcjonalne parowanie</strong> z drugą osobą (sekcja 4) — dopiero wtedy część danych przechodzi szyfrowanym kanałem przez przekaźnik.</div>
 
         <h2>1. Administrator danych</h2>
         <p>Administratorem danych dla aplikacji Riffle jest <strong>Maciej Siemiński</strong>. Kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
 
         <h2>2. Jakie dane przetwarzamy</h2>
         <p>Riffle służy do przesiewania zdjęć-wariantów: dodajesz zdjęcia, oznaczasz je jako „nie", „może" albo „tak" i grupujesz w kolekcje.</p>
-        <p>Aplikacja przechowuje <strong>wyłącznie na Twoim urządzeniu</strong>: zdjęcia, które sam wybrałeś, Twoje oceny, nazwy kolekcji oraz ustawienia (motyw, język, wibracje).</p>
-        <p>Te dane <strong>nie są wysyłane nigdzie</strong> — nie ma konta, nie ma logowania, nie ma synchronizacji i nie ma kopii w chmurze.</p>
+        <p>Aplikacja przechowuje <strong>na Twoim urządzeniu</strong>: zdjęcia, które sam wybrałeś, Twoje oceny, nazwy kolekcji oraz ustawienia (motyw, język, wibracje).</p>
+        <p><strong>Domyślnie</strong> te dane nie są nigdzie wysyłane — nie ma konta, nie ma logowania ani kopii w chmurze. Jedyny wyjątek to opcjonalne parowanie z drugą osobą, opisane w sekcji 4.</p>
 
         <h2>3. Dostęp do zdjęć</h2>
         <p>Aplikacja korzysta z systemowego okna wyboru zdjęć. Widzi wyłącznie te zdjęcia, które sam w nim zaznaczysz — nie ma dostępu do całej galerii. Wybrane zdjęcia są kopiowane do prywatnego magazynu aplikacji.</p>
 
-        <h2>4. Reklamy i śledzenie</h2>
+        <h2>4. Parowanie i synchronizacja (opcjonalne)</h2>
+        <p>Riffle pozwala opcjonalnie <strong>sparować dwa urządzenia</strong>, aby oceniać zdjęcia wspólnie z drugą osobą. Funkcja jest domyślnie wyłączona i uruchamia się dopiero, gdy sam ją włączysz i użyjesz kodu parowania.</p>
+        <p>Gdy z niej korzystasz:</p>
+        <ul>
+            <li>Do przekaźnika (serwera pośredniczącego pod adresem <strong>riffle-pair.maciek-sieminski.workers.dev</strong>) wysyłany jest wybrany przez Ciebie <strong>pseudonim</strong>, losowy identyfikator urządzenia oraz klucze publiczne. Służą one wyłącznie do połączenia Twoich dwóch urządzeń. Pseudonim jest widoczny dla przekaźnika.</li>
+            <li>Zdjęcia i oceny współdzielone między sparowanymi urządzeniami są <strong>szyfrowane end-to-end</strong> na Twoim urządzeniu, zanim je opuszczą. Przekaźnik nie może odczytać ich treści — przechowuje je tylko przez chwilę, do momentu pobrania przez drugie urządzenie, po czym są usuwane.</li>
+            <li>Przekaźnik <strong>nie przechowuje</strong> Twojej biblioteki zdjęć ani ocen — jedynie to, co niezbędne do przekazania danych między dwoma sparowanymi urządzeniami.</li>
+        </ul>
+        <p>Rozłączenie pary usuwa dane pary z przekaźnika. Jeśli nie korzystasz z parowania, żadne z powyższych danych nie opuszczają Twojego urządzenia.</p>
+
+        <h2>5. Reklamy i śledzenie</h2>
         <p>Ta wersja Riffle <strong>nie zawiera reklam</strong> ani sieci reklamowych. Nie prowadzi śledzenia, nie używa identyfikatorów reklamowych i nie profiluje użytkowników.</p>
 
-        <h2>5. Analityka i raportowanie błędów</h2>
+        <h2>6. Analityka i raportowanie błędów</h2>
         <p>Aplikacja nie zbiera analityki użycia. Jeżeli w danej wersji włączone jest raportowanie awarii, przesyłany jest wyłącznie techniczny raport błędu (model urządzenia, wersja systemu, wersja aplikacji, ślad stosu). Raport nie zawiera Twoich zdjęć, ocen ani nazw kolekcji.</p>
 
-        <h2>6. Usunięcie danych</h2>
-        <p>Usunięcie kolekcji w aplikacji trwale kasuje jej zdjęcia i oceny. Odinstalowanie aplikacji usuwa wszystkie jej dane z urządzenia. Nie musisz nas o nic prosić — nie mamy kopii.</p>
+        <h2>7. Usunięcie danych</h2>
+        <p>Usunięcie kolekcji w aplikacji trwale kasuje jej zdjęcia i oceny. Odinstalowanie aplikacji usuwa wszystkie jej dane z urządzenia. Jeśli korzystałeś z parowania, rozłączenie pary usuwa dane pary z przekaźnika; poza tym nie mamy żadnej kopii Twoich treści.</p>
 
-        <h2>7. Dzieci</h2>
+        <h2>8. Dzieci</h2>
         <p>Aplikacja nie jest kierowana do dzieci i nie zbiera świadomie danych od osób poniżej 13. roku życia.</p>
 
-        <h2>8. Zmiany</h2>
-        <p>Jeżeli w przyszłych wersjach pojawią się funkcje wymagające przesyłania danych (na przykład wspólne ocenianie z drugą osobą), ta polityka zostanie zaktualizowana <strong>zanim</strong> taka funkcja trafi do aplikacji.</p>
+        <h2>9. Zmiany</h2>
+        <p>Jeżeli w przyszłych wersjach pojawią się nowe funkcje wymagające przesyłania danych, ta polityka zostanie zaktualizowana <strong>zanim</strong> taka funkcja trafi do aplikacji.</p>
 
-        <h2>9. Kontakt</h2>
+        <h2>10. Kontakt</h2>
         <p>Pytania dotyczące prywatności: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
     </section>
 
     <section id="en" lang="en">
         <h1>Privacy Policy — Riffle</h1>
-        <p><strong>Last updated: 2026-07-28</strong></p>
+        <p><strong>Last updated: 2026-07-31</strong></p>
 
-        <div class="note">Riffle has no server. Everything you add to the app stays on your device.</div>
+        <div class="note">By default Riffle runs entirely on your device and needs no server. The only exception is <strong>optional pairing</strong> with another person (section 4) — only then does some data pass through a relay over an encrypted channel.</div>
 
         <h2>1. Data controller</h2>
         <p>The data controller for the Riffle app is <strong>Maciej Siemiński</strong>. Contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
 
         <h2>2. What data we process</h2>
         <p>Riffle helps you sift photo options: you add photos, mark them as “no”, “maybe” or “yes”, and group them into collections.</p>
-        <p>The app stores <strong>on your device only</strong>: the photos you picked, your ratings, collection names, and settings (theme, language, haptics).</p>
-        <p>This data <strong>is never uploaded</strong> — there is no account, no sign-in, no sync and no cloud backup.</p>
+        <p>The app stores <strong>on your device</strong>: the photos you picked, your ratings, collection names, and settings (theme, language, haptics).</p>
+        <p><strong>By default</strong> this data is never uploaded — there is no account, no sign-in and no cloud backup. The only exception is optional pairing with another person, described in section 4.</p>
 
         <h2>3. Photo access</h2>
         <p>The app uses the system photo picker. It only sees the photos you select there — it has no access to your full library. Selected photos are copied into the app's private storage.</p>
 
-        <h2>4. Advertising and tracking</h2>
+        <h2>4. Pairing and sync (optional)</h2>
+        <p>Riffle lets you optionally <strong>pair two devices</strong> so you can rate photos together with another person. The feature is off by default and only starts once you enable it and use a pairing code.</p>
+        <p>When you use it:</p>
+        <ul>
+            <li>A <strong>nickname</strong> you choose, a random device identifier and public keys are sent to the relay (an intermediary server at <strong>riffle-pair.maciek-sieminski.workers.dev</strong>). They are used solely to connect your two devices. The nickname is visible to the relay.</li>
+            <li>Photos and ratings shared between paired devices are <strong>end-to-end encrypted</strong> on your device before they leave it. The relay cannot read their contents — it only holds them briefly, until the other device downloads them, after which they are removed.</li>
+            <li>The relay <strong>does not store</strong> your photo library or ratings — only what is necessary to route data between the two paired devices.</li>
+        </ul>
+        <p>Unpairing removes the pair's data from the relay. If you do not use pairing, none of the above data leaves your device.</p>
+
+        <h2>5. Advertising and tracking</h2>
         <p>This version of Riffle contains <strong>no advertising</strong> and no ad networks. It does not track you, does not use advertising identifiers and does not profile users.</p>
 
-        <h2>5. Analytics and crash reporting</h2>
+        <h2>6. Analytics and crash reporting</h2>
         <p>The app collects no usage analytics. If crash reporting is enabled in a given build, only a technical error report is sent (device model, OS version, app version, stack trace). Reports contain none of your photos, ratings or collection names.</p>
 
-        <h2>6. Deleting your data</h2>
-        <p>Deleting a collection in the app permanently removes its photos and ratings. Uninstalling the app removes all of its data from the device. You do not need to ask us — we hold no copy.</p>
+        <h2>7. Deleting your data</h2>
+        <p>Deleting a collection in the app permanently removes its photos and ratings. Uninstalling the app removes all of its data from the device. If you used pairing, unpairing removes the pair's data from the relay; otherwise we hold no copy of your content.</p>
 
-        <h2>7. Children</h2>
+        <h2>8. Children</h2>
         <p>The app is not directed at children and does not knowingly collect data from anyone under 13.</p>
 
-        <h2>8. Changes</h2>
-        <p>If future versions add features that require transmitting data (for example, rating photos together with another person), this policy will be updated <strong>before</strong> such a feature ships.</p>
+        <h2>9. Changes</h2>
+        <p>If future versions add features that require transmitting data, this policy will be updated <strong>before</strong> such a feature ships.</p>
 
-        <h2>9. Contact</h2>
+        <h2>10. Contact</h2>
         <p>Privacy questions: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
     </section>
 
