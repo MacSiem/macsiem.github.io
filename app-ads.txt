@@ -1,5 +1,6 @@
 # app-ads.txt — MacSiem Apps
-# Zaktualizowano 2026-07-31: pelna lista Unity Ads (122) z dashboardu + Meta Audience Network.
+# Zaktualizowano 2026-08-09: wylacznie Unity Ads (122) z dashboardu.
+# USUNIETO Meta Audience Network — wypiete razem z mediacja 2026-08-02.
 # USUNIETO martwe konta Google AdMob (pub-2058509664374300, pub-5353750048775501) — konta wylaczone 07-27/07-29.
 
 # --- Unity Ads (autorytatywna lista z cloud.unity.com, 2026-07-31) ---
@@ -126,7 +127,5 @@ xandr.com, 17779, RESELLER
 zetaglobal.net, 525, RESELLER
 zmaticoo.com, 5135195, RESELLER
 
-# --- Meta Audience Network ---
-facebook.com, 1515577636625190, DIRECT, c3e20eee3f780d68
 
 ownerdomain=macsiem.dev
