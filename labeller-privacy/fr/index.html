@@ -51,14 +51,14 @@
     </div>
 
     <h1>Politique de confidentialité — Labeller</h1>
-    <p>Dernière mise à jour : 2026-07-30</p>
+    <p>Dernière mise à jour : 2026-08-03</p>
 
     <h2>1. À propos de Labeller</h2>
     <p><strong>Labeller: Batch Photo Labels</strong> (<code>dev.macsiem.labeller</code>) vous permet de sélectionner un lot de photos sur votre appareil, d'ajouter des zones de texte, des dessins à main levée, des formes et des occultations, puis de remplacer les originaux, d'enregistrer des copies annotées ou d'abandonner les modifications.</p>
-    <p>Éditeur : <strong>Maciej Siemiński</strong> · Site web : <a href="https://macsiem.dev/">MacSiem.dev</a> · Contact : <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
+    <p>Éditeur et responsable du traitement pour la version iOS/App Store : <strong>Maciej Siemiński</strong>. Responsable du traitement pour la version Android/Google Play : <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Warszawa, Pologne (la version Google Play affiche de la publicité, ce qui nécessite un responsable publicitaire basé dans l'UE). Site web : <a href="https://macsiem.dev/">MacSiem.dev</a> · Contact : <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
 
     <h2>2. Résumé en langage clair</h2>
-    <p>Vos photos ne quittent jamais votre appareil. Leur sélection, leur modification et leur rendu final sont effectués localement. Labeller ne propose ni compte ni connexion, ne dispose d'aucun serveur d'application ni synchronisation dans le cloud, ne relie pas les appareils et ne permet aucun partage de données entre utilisateurs. Seules les données limitées de diagnostic des plantages et erreurs décrites aux sections 10 et 11 sont envoyées hors de l'appareil.</p>
+    <p>Les fichiers de vos photos ne quittent jamais votre appareil — la sélection, la modification et le rendu final s'effectuent exclusivement en local, et le contenu des photos n'est jamais téléversé. Labeller ne nécessite ni compte ni connexion. Une fonction de synchronisation optionnelle, réservée à Premium, peut relier vos propres appareils : elle envoie les noms des collections et les étiquettes (pas les fichiers photo) chiffrés de bout en bout, de sorte que notre serveur relais ne peut pas les lire. Des publicités (Unity Ads) sont diffusées dans la version gratuite et utilisent l'identifiant publicitaire de l'appareil avec votre consentement. Voir les sections 12–13 pour plus de détails, et la section 16 pour savoir comment supprimer vos données.</p>
 
     <h2>3. Traitement local des photos</h2>
     <p>Labeller traite les photos que vous sélectionnez avec le sélecteur du système ou grâce à l'autorisation d'accès à la photothèque. Les images sélectionnées ainsi que chaque zone de texte, dessin, forme ou occultation sont traitées sur l'appareil. Aucun contenu photographique n'est téléversé ni transmis.</p>
@@ -91,7 +91,7 @@
     </ul>
 
     <h2>9. Autorisations et identifiants bloqués</h2>
-    <p>Le manifeste de Labeller bloque expressément les autorisations d'accès à la localisation, aux contacts, au microphone, à la superposition d'écran et à l'identifiant publicitaire. Labeller n'utilise pas ces fonctions.</p>
+    <p>Le manifeste de Labeller bloque expressément les autorisations d'accès à la localisation, aux contacts, au microphone et à la superposition d'écran. Labeller n'utilise pas ces fonctions. L'identifiant publicitaire est utilisé par le SDK Unity Ads décrit à la section 13 ; il n'est utilisé à aucune autre fin.</p>
 
     <h2>10. Diagnostic des plantages et erreurs</h2>
     <p>Labeller signale les plantages et erreurs à <strong>Sentry</strong>, au moyen du projet <code>labeller</code> de l'organisation <code>maciej-sieminski</code>. Un rapport de diagnostic peut contenir le modèle de l'appareil, la version du système d'exploitation, la version de l'application et des traces de pile techniques. Ces rapports servent à repérer les plantages et erreurs dans l'application.</p>
@@ -100,10 +100,10 @@
     <p>L'intégration Sentry de Labeller retire des rapports de diagnostic les chemins d'images et le texte des légendes. Aucune photo ni aucun contenu de légende n'est transmis à Sentry. Les chemins d'images et le texte des annotations ne sont pas transmis non plus.</p>
 
     <h2>12. Comptes, serveurs et fonctions entre utilisateurs</h2>
-    <p>Labeller ne propose ni compte ni connexion. Il n'existe aucun serveur d'application, aucune synchronisation dans le cloud, aucune fonction de liaison entre appareils et aucune fonction de transfert de données entre utilisateurs. Vos collections locales ne sont pas transférées à un autre utilisateur.</p>
+    <p>Labeller ne propose ni compte ni connexion. Une fonction Premium optionnelle, la synchronisation, vous permet de relier vos propres appareils afin que les noms des collections et les étiquettes restent identiques sur chacun d'eux. La synchronisation est désactivée par défaut et n'envoie que des métadonnées de collections et d'étiquettes — jamais de fichiers ni de chemins de photos — et uniquement entre les appareils que vous avez vous-même appairés. Chaque appareil génère sa propre paire de clés de chiffrement ; les données sont chiffrées de bout en bout avant de quitter l'appareil, et notre serveur relais (Cloudflare Workers/R2) ne conserve le tampon chiffré que le temps nécessaire à sa livraison, puis le supprime. Le serveur relais ne peut pas déchiffrer vos données. La synchronisation ne crée aucune connexion ni partage de données entre les comptes de différents utilisateurs — elle relie uniquement les appareils que vous contrôlez.</p>
 
     <h2>13. Publicité et suivi</h2>
-    <p>La version actuelle de Labeller ne contient aucune publicité, n'affiche aucune demande App Tracking Transparency et n'utilise aucun identifiant publicitaire.</p>
+    <p>La version gratuite de Labeller affiche des publicités diffusées par Unity Ads. Sur iOS, Labeller affiche la demande App Tracking Transparency avant d'utiliser l'identifiant publicitaire à des fins de suivi ; si vous refusez, des publicités continuent de s'afficher mais sont moins personnalisées. Sur Android, l'identifiant publicitaire est utilisé conformément au processus de consentement affiché dans l'application. Unity Ads peut partager des données avec ses propres partenaires publicitaires conformément à la politique de confidentialité d'Unity. Premium supprime les publicités.</p>
 
     <h2>14. Achats intégrés</h2>
     <p>La version actuelle de Labeller ne propose aucun achat intégré actif.</p>
@@ -111,8 +111,11 @@
     <h2>15. Conservation et choix d'enregistrement</h2>
     <p>Les photos restent dans la photothèque système conformément à votre choix : remplacer les originaux sélectionnés, enregistrer des copies annotées en laissant les originaux intacts, ou abandonner les modifications. Les collections et leurs annotations restent uniquement sur l'appareil jusqu'à ce que vous supprimiez la collection ou l'application.</p>
 
-    <h2>16. Contact et date de la politique</h2>
-    <p>Pour toute question concernant cette politique, contactez <strong>Maciej Siemiński</strong> à l'adresse <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Cette politique a été mise à jour pour la dernière fois le 2026-07-30.</p>
+    <h2>16. Suppression de vos données</h2>
+    <p>Vous pouvez à tout moment supprimer tout ce que Labeller stocke à votre sujet : supprimez une collection dans l'application pour la retirer, avec ses annotations, de votre appareil, ou supprimez l'application pour effacer toutes les données locales en une seule fois. Si vous avez utilisé la synchronisation, vous pouvez dissocier l'appairage dans Réglages → Synchronisation, ce qui supprime du serveur relais les données chiffrées de vos appareils appairés ; comme les données du serveur relais expirent également automatiquement peu de temps après chaque synchronisation, aucune demande distincte n'est généralement nécessaire. Si vous souhaitez que nous confirmions manuellement la suppression de métadonnées de synchronisation résiduelles, contactez <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> et nous traiterons votre demande sous 30 jours.</p>
+
+    <h2>17. Contact et date de la politique</h2>
+    <p>Pour toute question concernant cette politique, contactez <strong>Maciej Siemiński</strong> à l'adresse <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Cette politique a été mise à jour pour la dernière fois le 2026-08-03.</p>
     <p>Version canonique : <a href="https://macsiem.github.io/labeller-privacy/">https://macsiem.github.io/labeller-privacy/</a></p>
 
     <footer>© 2026 Maciej Siemiński · <a href="https://macsiem.dev/">MacSiem.dev</a> · <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> · <a href="https://macsiem.github.io/labeller-privacy/">macsiem.github.io/labeller-privacy/</a></footer>

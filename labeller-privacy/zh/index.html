@@ -51,14 +51,14 @@
     </div>
 
     <h1>隐私政策 — Labeller</h1>
-    <p>最后更新：2026-07-30</p>
+    <p>最后更新：2026-08-03</p>
 
     <h2>1. 关于 Labeller</h2>
     <p><strong>Labeller: Batch Photo Labels</strong>（<code>dev.macsiem.labeller</code>）可让您从设备中批量选择照片，添加文本框、手绘内容、形状和遮挡，然后覆盖原始照片、保存带标注的副本，或放弃编辑。</p>
-    <p>发布者：<strong>Maciej Siemiński</strong> · 网站：<a href="https://macsiem.dev/">MacSiem.dev</a> · 联系邮箱：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
+    <p>发布者及 iOS/App Store 版本的数据控制者：<strong>Maciej Siemiński</strong>。Android/Google Play 版本的数据控制者：<strong>LICENCEPRO POLSKA Sp. z o.o.</strong>，地址 ul. Huculska 6, 00-730 Warszawa, 波兰（Google Play 版本展示广告，因此需要一位总部位于欧盟的广告数据控制者）。网站：<a href="https://macsiem.dev/">MacSiem.dev</a> · 联系邮箱：<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
 
     <h2>2. 简明摘要</h2>
-    <p>您的照片绝不会离开设备。照片选择、编辑和最终渲染都在本地完成。Labeller 不提供账户或登录，没有应用服务器、云同步、设备间连接或用户间数据共享功能。只有第 10 节和第 11 节所述的有限崩溃与错误诊断数据会发送到设备之外。</p>
+    <p>您的照片文件绝不会离开设备——选择、编辑和最终渲染均只在本地完成，照片内容永远不会被上传。Labeller 不要求账户或登录。一项仅限 Premium 使用的可选同步功能可以连接您自己的设备：它会将集合名称和标签（而非照片文件）进行端到端加密后发送，因此我们的中继服务器无法读取其内容。免费版会展示广告（Unity Ads），在您同意的前提下使用设备的广告标识符。详情参见第 12–13 节，如何删除您的数据请参见第 16 节。</p>
 
     <h2>3. 本地照片处理</h2>
     <p>Labeller 会处理您通过系统照片选择器或照片图库权限所选择的照片。所选图像以及所有文本框、绘图、形状和遮挡都在设备上处理。任何照片内容都不会上传或传输。</p>
@@ -91,7 +91,7 @@
     </ul>
 
     <h2>9. 已阻止的权限和标识符</h2>
-    <p>Labeller 的清单明确阻止位置、通讯录、麦克风、屏幕悬浮层和广告标识符权限。Labeller 不使用这些功能。</p>
+    <p>Labeller 的清单明确阻止位置、通讯录、麦克风和屏幕悬浮层权限。Labeller 不使用这些功能。广告标识符由第 13 节所述的 Unity Ads SDK 使用，不用于任何其他目的。</p>
 
     <h2>10. 崩溃与错误诊断</h2>
     <p>Labeller 使用 <code>maciej-sieminski</code> 组织下的 <code>labeller</code> 项目向 <strong>Sentry</strong> 报告崩溃和错误。诊断报告可能包含设备型号、操作系统版本、应用版本和技术堆栈跟踪。这些报告用于识别应用中的崩溃和错误。</p>
@@ -100,10 +100,10 @@
     <p>Labeller 的 Sentry 集成会从诊断报告中清除图像路径和说明文字文本。照片或说明文字内容不会传输给 Sentry。图像路径和标注文本也不会传输。</p>
 
     <h2>12. 账户、服务器和用户间功能</h2>
-    <p>Labeller 不提供账户或登录。它没有应用服务器、云同步、设备连接功能或用户间数据传输功能。您的本地集合不会传输给其他用户。</p>
+    <p>Labeller 不提供账户或登录功能。Premium 中的一项可选功能——同步——可让您连接自己的设备，使集合名称和标签在这些设备之间保持一致。同步默认关闭，且只发送集合和标签的元数据——绝不发送照片文件或路径——且仅在您本人配对过的设备之间进行。每台设备都会生成自己的加密密钥对；数据在离开设备之前会经过端到端加密，我们的中继服务器（Cloudflare Workers/R2）仅在传递所需的时间内保存加密的缓冲数据，随后将其删除。中继服务器无法解密您的数据。同步不会在不同用户的账户之间建立任何连接或数据共享——它只连接您自己控制的设备。</p>
 
     <h2>13. 广告与跟踪</h2>
-    <p>当前版本的 Labeller 不含广告，不显示 App Tracking Transparency 提示，也不使用广告标识符。</p>
+    <p>Labeller 免费版会展示由 Unity Ads 提供的广告。在 iOS 上，Labeller 会在将广告标识符用于跟踪之前显示 App 跟踪透明度提示；如果您拒绝，广告仍会展示，但个性化程度较低。在 Android 上，广告标识符的使用遵循应用内显示的同意流程。根据 Unity 的隐私政策，Unity Ads 可能会与其自身的广告合作伙伴共享数据。Premium 会移除广告。</p>
 
     <h2>14. 应用内购买</h2>
     <p>当前版本的 Labeller 没有启用任何应用内购买。</p>
@@ -111,8 +111,11 @@
     <h2>15. 保留期限与保存选择</h2>
     <p>照片会按照您的选择保留在系统照片图库中：覆盖所选原始照片；保存带标注的副本并保持原始照片不变；或放弃编辑。集合及其标注仅保留在设备上，直到您删除该集合或删除应用。</p>
 
-    <h2>16. 联系方式与政策日期</h2>
-    <p>如对本政策有任何疑问，请通过 <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> 联系 <strong>Maciej Siemiński</strong>。本政策最后更新于 2026-07-30。</p>
+    <h2>16. 删除您的数据</h2>
+    <p>您可以随时删除 Labeller 存储的与您有关的所有内容：在应用中删除某个集合，即可将其及其标注从设备中移除；或删除应用，一次性移除全部本地数据。如果您使用过同步功能，可以在“设置 → 同步”中断开配对，这会删除中继服务器上已配对设备的加密数据；由于中继服务器上的数据也会在每次同步后不久自动过期，通常无需另行申请。如果您希望我们手动确认删除任何残留的同步元数据，请联系 <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>，我们将在 30 天内处理您的请求。</p>
+
+    <h2>17. 联系方式与政策日期</h2>
+    <p>如对本政策有任何疑问，请通过 <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> 联系 <strong>Maciej Siemiński</strong>。本政策最后更新于 2026-08-03。</p>
     <p>规范版本：<a href="https://macsiem.github.io/labeller-privacy/">https://macsiem.github.io/labeller-privacy/</a></p>
 
     <footer>© 2026 Maciej Siemiński · <a href="https://macsiem.dev/">MacSiem.dev</a> · <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> · <a href="https://macsiem.github.io/labeller-privacy/">macsiem.github.io/labeller-privacy/</a></footer>

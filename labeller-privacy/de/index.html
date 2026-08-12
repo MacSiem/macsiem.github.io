@@ -51,14 +51,14 @@
     </div>
 
     <h1>Datenschutzerklärung — Labeller</h1>
-    <p>Zuletzt aktualisiert: 2026-07-30</p>
+    <p>Zuletzt aktualisiert: 2026-08-03</p>
 
     <h2>1. Über Labeller</h2>
     <p>Mit <strong>Labeller: Batch Photo Labels</strong> (<code>dev.macsiem.labeller</code>) können Sie mehrere Fotos von Ihrem Gerät auswählen, Textfelder, Freihandzeichnungen, Formen und Schwärzungen hinzufügen und anschließend die Originale überschreiben, bearbeitete Kopien speichern oder die Änderungen verwerfen.</p>
-    <p>Herausgeber: <strong>Maciej Siemiński</strong> · Website: <a href="https://macsiem.dev/">MacSiem.dev</a> · Kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
+    <p>Herausgeber und Verantwortlicher für die iOS/App Store-Version: <strong>Maciej Siemiński</strong>. Verantwortlicher für die Android/Google Play-Version: <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Warszawa, Polen (die Play-Store-Version zeigt Werbung an, was einen in der EU ansässigen Werbeverantwortlichen erfordert). Website: <a href="https://macsiem.dev/">MacSiem.dev</a> · Kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
 
     <h2>2. Zusammenfassung in einfacher Sprache</h2>
-    <p>Ihre Fotos verlassen niemals Ihr Gerät. Auswahl, Bearbeitung und endgültige Darstellung der Fotos erfolgen vollständig lokal. Labeller hat weder Konto noch Anmeldung, keinen App-Server, keine Cloud-Synchronisierung, keine Verbindung zwischen Geräten und keinen Datenaustausch zwischen Nutzern. Außerhalb des Geräts werden nur die begrenzten Absturz- und Fehlerdiagnosedaten übermittelt, die in den Abschnitten 10 und 11 beschrieben sind.</p>
+    <p>Ihre Fotodateien verlassen niemals Ihr Gerät — Auswahl, Bearbeitung und endgültige Darstellung erfolgen ausschließlich lokal, Fotoinhalte werden nie hochgeladen. Labeller erfordert kein Konto und keine Anmeldung. Eine optionale, nur in Premium verfügbare Synchronisierungsfunktion kann Ihre eigenen Geräte verknüpfen: Sie überträgt Sammlungsnamen und Beschriftungen (keine Fotodateien) Ende-zu-Ende-verschlüsselt, sodass unser Relay-Server sie nicht lesen kann. In der kostenlosen Version werden Anzeigen (Unity Ads) geschaltet, die mit Ihrer Zustimmung die Werbe-ID des Geräts verwenden. Details in den Abschnitten 12–13, zum Löschen Ihrer Daten siehe Abschnitt 16.</p>
 
     <h2>3. Lokale Fotoverarbeitung</h2>
     <p>Labeller verarbeitet die Fotos, die Sie über die Systemfotoauswahl oder mit der Fotomediathek-Berechtigung auswählen. Die ausgewählten Bilder sowie alle Textfelder, Zeichnungen, Formen und Schwärzungen werden auf dem Gerät verarbeitet. Fotoinhalte werden weder hochgeladen noch übertragen.</p>
@@ -91,7 +91,7 @@
     </ul>
 
     <h2>9. Blockierte Berechtigungen und Kennungen</h2>
-    <p>Das Manifest von Labeller blockiert ausdrücklich Berechtigungen für Standort, Kontakte, Mikrofon, Bildschirm-Overlay und Werbe-ID. Labeller verwendet diese Funktionen nicht.</p>
+    <p>Das Manifest von Labeller blockiert ausdrücklich Berechtigungen für Standort, Kontakte, Mikrofon und Bildschirm-Overlay. Labeller verwendet diese Funktionen nicht. Die Werbe-ID wird vom in Abschnitt 13 beschriebenen Unity-Ads-SDK verwendet; für keinen anderen Zweck.</p>
 
     <h2>10. Absturz- und Fehlerdiagnose</h2>
     <p>Labeller meldet Abstürze und Fehler an <strong>Sentry</strong> und verwendet dafür das Projekt <code>labeller</code> in der Organisation <code>maciej-sieminski</code>. Ein Diagnosebericht kann Gerätemodell, Betriebssystemversion, App-Version und technische Stacktraces enthalten. Diese Berichte dienen dazu, Abstürze und Fehler in der App zu erkennen.</p>
@@ -100,10 +100,10 @@
     <p>Die Sentry-Integration von Labeller entfernt Bildpfade und Beschriftungstexte aus Diagnoseberichten. Es werden keine Fotos oder Beschriftungsinhalte an Sentry übertragen. Auch Bildpfade und Anmerkungstexte werden nicht übertragen.</p>
 
     <h2>12. Konten, Server und Funktionen zwischen Nutzern</h2>
-    <p>Labeller bietet keine Konten und keine Anmeldung. Es gibt keinen App-Server, keine Cloud-Synchronisierung, keine Funktion zum Verknüpfen von Geräten und keine Funktion zum Übertragen von Daten zwischen Nutzern. Ihre lokalen Sammlungen werden nicht an andere Nutzer übertragen.</p>
+    <p>Labeller bietet keine Konten und keine Anmeldung an. Eine optionale Premium-Funktion, die Synchronisierung, ermöglicht es, Ihre eigenen Geräte zu verknüpfen, damit Sammlungsnamen und Beschriftungen auf ihnen übereinstimmen. Die Synchronisierung ist standardmäßig deaktiviert und überträgt ausschließlich Metadaten zu Sammlungen und Beschriftungen — niemals Fotodateien oder -pfade — und nur zwischen Geräten, die Sie selbst gekoppelt haben. Jedes Gerät erzeugt sein eigenes Schlüsselpaar; Daten werden Ende-zu-Ende-verschlüsselt, bevor sie das Gerät verlassen, und unser Relay-Server (Cloudflare Workers/R2) speichert den verschlüsselten Puffer nur so lange, wie für die Zustellung nötig, und löscht ihn danach. Der Relay-Server kann Ihre Daten nicht entschlüsseln. Die Synchronisierung schafft keine Verbindung oder Datenweitergabe zwischen den Konten verschiedener Nutzer — sie verknüpft ausschließlich Geräte, die Sie selbst kontrollieren.</p>
 
     <h2>13. Werbung und Tracking</h2>
-    <p>Die aktuelle Version von Labeller enthält keine Werbung, zeigt keine Aufforderung zur App Tracking Transparency an und verwendet keine Werbe-ID.</p>
+    <p>Die kostenlose Version von Labeller zeigt Anzeigen von Unity Ads. Unter iOS zeigt Labeller vor der Verwendung der Werbe-ID zu Tracking-Zwecken die App-Tracking-Transparency-Abfrage; lehnen Sie ab, werden weiterhin Anzeigen angezeigt, jedoch weniger personalisiert. Unter Android wird die Werbe-ID gemäß dem in der App angezeigten Einwilligungsprozess verwendet. Unity Ads kann Daten gemäß der Datenschutzerklärung von Unity an eigene Werbepartner weitergeben. Premium entfernt Werbung.</p>
 
     <h2>14. In-App-Käufe</h2>
     <p>In der aktuellen Version von Labeller sind keine In-App-Käufe aktiv.</p>
@@ -111,8 +111,11 @@
     <h2>15. Speicherdauer und Ihre Speicherwahl</h2>
     <p>Fotos verbleiben entsprechend Ihrer Speicherwahl in der Systemfotomediathek: Sie können die ausgewählten Originale überschreiben, bearbeitete Kopien speichern und die Originale unverändert lassen oder die Änderungen verwerfen. Sammlungen und ihre Anmerkungen bleiben nur so lange auf dem Gerät, bis Sie die Sammlung oder die App löschen.</p>
 
-    <h2>16. Kontakt und Datum der Erklärung</h2>
-    <p>Bei Fragen zu dieser Erklärung wenden Sie sich an <strong>Maciej Siemiński</strong> unter <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Diese Erklärung wurde zuletzt am 2026-07-30 aktualisiert.</p>
+    <h2>16. Löschen Ihrer Daten</h2>
+    <p>Sie können jederzeit alles löschen, was Labeller über Sie speichert: Löschen Sie eine Sammlung in der App, um sie samt Anmerkungen von Ihrem Gerät zu entfernen, oder löschen Sie die App, um alle lokalen Daten auf einmal zu entfernen. Falls Sie die Synchronisierung genutzt haben, können Sie die Kopplung unter Einstellungen → Synchronisierung trennen; dadurch werden die verschlüsselten Daten Ihrer gekoppelten Geräte vom Relay-Server gelöscht. Da die Daten auf dem Relay-Server ohnehin kurz nach jeder Synchronisierung automatisch ablaufen, ist normalerweise keine gesonderte Anfrage nötig. Wenn Sie möchten, dass wir die Löschung eventuell verbliebener Synchronisierungsmetadaten manuell bestätigen, wenden Sie sich an <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> — wir bearbeiten Ihre Anfrage innerhalb von 30 Tagen.</p>
+
+    <h2>17. Kontakt und Datum der Erklärung</h2>
+    <p>Bei Fragen zu dieser Erklärung wenden Sie sich an <strong>Maciej Siemiński</strong> unter <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Diese Erklärung wurde zuletzt am 2026-08-03 aktualisiert.</p>
     <p>Kanonische Fassung: <a href="https://macsiem.github.io/labeller-privacy/">https://macsiem.github.io/labeller-privacy/</a></p>
 
     <footer>© 2026 Maciej Siemiński · <a href="https://macsiem.dev/">MacSiem.dev</a> · <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> · <a href="https://macsiem.github.io/labeller-privacy/">macsiem.github.io/labeller-privacy/</a></footer>

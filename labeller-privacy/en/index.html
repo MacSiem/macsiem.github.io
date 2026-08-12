@@ -51,14 +51,14 @@
     </div>
 
     <h1>Privacy Policy — Labeller</h1>
-    <p>Last updated: 2026-07-30</p>
+    <p>Last updated: 2026-08-03</p>
 
     <h2>1. About Labeller</h2>
     <p><strong>Labeller: Batch Photo Labels</strong> (<code>dev.macsiem.labeller</code>) lets you select a batch of photos from your device, add text boxes, freehand drawing, shapes, and redactions, and then overwrite the originals, save annotated copies, or discard your edits.</p>
-    <p>Publisher: <strong>Maciej Siemiński</strong> · Website: <a href="https://macsiem.dev/">MacSiem.dev</a> · Contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
+    <p>Publisher and data controller for the iOS/App Store version: <strong>Maciej Siemiński</strong>. Data controller for the Android/Google Play version: <strong>LICENCEPRO POLSKA Sp. z o.o.</strong>, ul. Huculska 6, 00-730 Warszawa, Polska (the Play Store version shows advertising, which requires an EU-based advertising data controller). Website: <a href="https://macsiem.dev/">MacSiem.dev</a> · Contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
 
     <h2>2. Summary in plain language</h2>
-    <p>Your photos never leave your device. Photo selection, editing, and final rendering all happen locally. Labeller has no account or login, no app server, no cloud sync, no connection between devices, and no sharing between users. The only information sent outside the device is the limited crash and error diagnostic data described in Sections 10 and 11.</p>
+    <p>Your photo files never leave your device — selection, editing, and final rendering all happen locally, and photo bytes are never uploaded. Labeller does not require an account or login. An optional, Premium-only sync feature can link your own devices: it sends collection names and labels (not photo files) end-to-end encrypted, so our relay server cannot read them. Ads (Unity Ads) run in the free version and use your device's advertising identifier, subject to your consent. See Sections 12–13 for details, and Section 16 for how to delete your data.</p>
 
     <h2>3. Local photo processing</h2>
     <p>Labeller processes the photos you select through the system photo picker or photo-library permission. The selected images and every text box, drawing, shape, or redaction are processed on the device. No photo content is uploaded or transmitted.</p>
@@ -91,7 +91,7 @@
     </ul>
 
     <h2>9. Permissions and identifiers that are blocked</h2>
-    <p>Labeller's manifest explicitly blocks permissions for location, contacts, microphone, screen overlay, and the advertising identifier. Labeller does not use those capabilities.</p>
+    <p>Labeller's manifest explicitly blocks permissions for location, contacts, microphone, and screen overlay. Labeller does not use those capabilities. The advertising identifier is used by the Unity Ads SDK described in Section 13; it is not used for any other purpose.</p>
 
     <h2>10. Crash and error diagnostics</h2>
     <p>Labeller reports crashes and errors to <strong>Sentry</strong>, using the <code>labeller</code> project in the <code>maciej-sieminski</code> organisation. A diagnostic report may contain the device model, operating-system version, app version, and technical stack traces. These reports are used to identify crashes and errors in the app.</p>
@@ -100,10 +100,10 @@
     <p>Labeller's Sentry integration scrubs image paths and caption text from diagnostic reports. No photo or caption content is transmitted to Sentry. Image paths and annotation text are not transmitted either.</p>
 
     <h2>12. Accounts, servers, and user-to-user features</h2>
-    <p>Labeller does not offer accounts or login. It has no app server, cloud synchronization, device-linking feature, or feature for sharing data between users. Your local collections are not transferred to another user.</p>
+    <p>Labeller does not offer accounts or login. An optional Premium feature, sync, lets you link your own devices to keep collection names and labels in step between them. Sync is off by default and only sends collection and label metadata — never photo files or paths — and only between devices you have paired yourself. Each device generates its own encryption key pair; data is end-to-end encrypted before it leaves the device, and our relay server (Cloudflare Workers/R2) stores the encrypted buffer only long enough to deliver it, then deletes it. The relay cannot decrypt your data. Sync does not create any connection or data sharing between different users' accounts — it only links devices you control.</p>
 
     <h2>13. Advertising and tracking</h2>
-    <p>The current version of Labeller contains no advertising, does not show an App Tracking Transparency prompt, and does not use an advertising identifier.</p>
+    <p>The free version of Labeller shows ads served by Unity Ads. On iOS, Labeller shows the App Tracking Transparency prompt before using the advertising identifier for tracking; if you decline, ads are still shown but are less personalized. On Android, the advertising identifier is used subject to the consent flow shown in the app. Unity Ads may share data with its own advertising partners under Unity's privacy policy. Premium removes ads.</p>
 
     <h2>14. In-app purchases</h2>
     <p>The current version of Labeller has no active in-app purchases.</p>
@@ -111,8 +111,11 @@
     <h2>15. Retention and your save choices</h2>
     <p>Photos remain in your system photo library according to the save choice you make: overwrite the selected originals, save annotated copies while leaving originals untouched, or discard the edits. Collections and their annotations remain only on the device until you delete the collection or delete the app.</p>
 
-    <h2>16. Contact and policy date</h2>
-    <p>For questions about this policy, contact <strong>Maciej Siemiński</strong> at <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. This policy was last updated on 2026-07-30.</p>
+    <h2>16. Deleting your data</h2>
+    <p>You can delete everything Labeller stores about you at any time: delete a collection in the app to remove it and its annotations from your device, or delete the app to remove all local data at once. If you have used sync, you can disconnect pairing in Settings → Sync, which deletes your paired devices' encrypted data from the relay server; because relay data also expires automatically a short time after each sync, no separate request is normally needed. If you would like us to manually confirm deletion of any residual sync metadata, contact <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> and we will act on your request within 30 days.</p>
+
+    <h2>17. Contact and policy date</h2>
+    <p>For questions about this policy, contact <strong>Maciej Siemiński</strong> at <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. This policy was last updated on 2026-08-03.</p>
     <p>Canonical policy: <a href="https://macsiem.github.io/labeller-privacy/">https://macsiem.github.io/labeller-privacy/</a></p>
 
     <footer>© 2026 Maciej Siemiński · <a href="https://macsiem.dev/">MacSiem.dev</a> · <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> · <a href="https://macsiem.github.io/labeller-privacy/">macsiem.github.io/labeller-privacy/</a></footer>
