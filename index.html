@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <title>MacSiem.dev</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="MacSiem.dev builds eleven local-first mobile apps and Home Assistant tools, including Compresser, Mote, Archivr, VaxJournal, DeMotion, Upscalr, Bobas, BabySteps, Echo, Labeller and Riffle.">
+<meta property="og:title" content="MacSiem.dev — mobile and Home Assistant software">
+<meta property="og:description" content="Eleven local-first mobile apps and practical Home Assistant tools by Maciej Siemiński.">
+<meta property="og:type" content="website">
 <link rel="canonical" href="https://macsiem.dev/" />
 <style>
   :root {
@@ -44,6 +48,19 @@
     border-bottom: 1px solid var(--line);
     background: #eee8e1;
   }
+  .app-preview {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    aspect-ratio: 1320 / 2868;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(145deg, #ede7ff, #cfe6ff);
+    color: #342b58;
+    font-size: clamp(32px, 7vw, 58px);
+    font-weight: 750;
+    letter-spacing: -0.06em;
+  }
+  .app-preview--riffle { background: linear-gradient(145deg, #dff8e7, #e5e1ff); color: #1e4c3a; }
   .app-body { padding: 14px; }
   .app h3 { font-size: 16px; line-height: 1.2; margin: 0 0 6px; }
   .app p { font-size: 13px; margin: 0 0 10px; color: var(--muted); }
@@ -126,6 +143,56 @@
           <a href="https://apps.apple.com/app/id6772784439">App Store</a>
           <a href="https://play.google.com/store/apps/details?id=com.macsiem.upscalr">Google Play</a>
           <a href="https://macsiem.github.io/upscalr-privacy/">Privacy</a>
+        </div>
+      </div>
+    </article>
+    <article class="app">
+      <div class="app-preview" aria-hidden="true">B</div>
+      <div class="app-body">
+        <h3>Bobas: Family Companion</h3>
+        <p>A practical family companion for everyday routines.</p>
+        <div class="links">
+          <a href="https://play.google.com/store/apps/details?id=com.bobasapp.app">Google Play</a>
+        </div>
+      </div>
+    </article>
+    <article class="app">
+      <div class="app-preview" aria-hidden="true">B</div>
+      <div class="app-body">
+        <h3>BabySteps: Early Development</h3>
+        <p>Track small developmental moments and routines in one calm place.</p>
+        <div class="links">
+          <a href="https://play.google.com/store/apps/details?id=com.macsiem.babysteps">Google Play</a>
+        </div>
+      </div>
+    </article>
+    <article class="app">
+      <div class="app-preview" aria-hidden="true">E</div>
+      <div class="app-body">
+        <h3>Echo: Emotion Journal</h3>
+        <p>A private, on-device journal for noticing emotional patterns over time.</p>
+        <div class="links">
+          <a href="https://play.google.com/store/apps/details?id=dev.macsiem.echo">Google Play</a>
+        </div>
+      </div>
+    </article>
+    <article class="app" data-app-status="unpublished">
+      <div class="app-preview" aria-hidden="true">L</div>
+      <div class="app-body">
+        <h3>Labeller: Batch Photo Labels</h3>
+        <p>Add consistent text labels to photo batches while keeping photos on your device. Not publicly listed yet.</p>
+        <div class="links">
+          <a href="/labeller-privacy/">Privacy</a>
+        </div>
+      </div>
+    </article>
+    <article class="app" data-app-status="unpublished">
+      <div class="app-preview app-preview--riffle" aria-hidden="true">R</div>
+      <div class="app-body">
+        <h3>Riffle: Choose Photo Variants</h3>
+        <p>Review similar shots quickly and mark each one to keep, reject, or revisit. Not publicly listed yet.</p>
+        <div class="links">
+          <a href="/riffle-privacy/">Privacy</a>
         </div>
       </div>
     </article>
