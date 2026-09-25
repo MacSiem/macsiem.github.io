@@ -36,8 +36,8 @@
 
         <h2>2. Dane lokalne i opcjonalny szyfrowany backup</h2>
         <p>Echo to dziennik emocji. Twoje wpisy (nastroje, notatki, wyzwalacze, ustawienia i własne kategorie) są przechowywane lokalnie na Twoim urządzeniu w szyfrowanym magazynie aplikacji.</p>
-        <p>Jeżeli włączysz funkcję Premium szyfrowanego backupu w chmurze, aplikacja szyfruje snapshot na urządzeniu przed wysłaniem. Serwer backupu przechowuje tylko zaszyfrowany blob, rozmiar i datę aktualizacji. Fraza odzyskiwania oraz treść dziennika nie są wysyłane na serwer.</p>
-        <p>Logowanie przez Apple albo Google służy wyłącznie do powiązania zaszyfrowanego backupu z Twoim kontem. Dostawcy logowania mogą przetwarzać dane zgodnie z własnymi politykami. W aplikacji możesz wylogować się albo usunąć konto backupu; usunięcie konta backupu nie usuwa lokalnych danych z urządzenia.</p>
+        <p>Jeżeli zalogujesz się i wybierzesz bezpłatną kopię konta, aplikacja szyfruje dane na urządzeniu przed wysłaniem. Usługa przechowuje zaszyfrowaną kopię, metadane potrzebne do synchronizacji oraz klucz konta zabezpieczony kluczem serwera. Po zalogowaniu na innym urządzeniu usługa może udostępnić klucz temu samemu kontu. Usługa nie otrzymuje treści dziennika ani starszej frazy odzyskiwania. Fraza służy tylko do jednorazowego przeniesienia wcześniejszej kopii; poprzedni zaszyfrowany plik jest wtedy archiwizowany na 90 dni.</p>
+        <p>Logowanie przez Apple albo Google służy do potwierdzenia tożsamości, powiązania zaszyfrowanej kopii z kontem i udostępnienia klucza konta na Twoich urządzeniach. Dostawcy logowania mogą przetwarzać dane zgodnie z własnymi politykami. W aplikacji możesz wylogować się albo usunąć konto backupu; usunięcie konta backupu nie usuwa lokalnych danych z urządzenia.</p>
 
         <h2>3. Diagnostyka (Sentry)</h2>
         <p>Aby poprawiać stabilność aplikacji, używamy narzędzia <strong>Sentry</strong> do zbierania raportów o awariach. Raporty <strong>nie zawierają treści Twoich wpisów</strong> — pola takie jak wpisy, nastroje, wyzwalacze i identyfikatory są usuwane (PII scrubbing) przed wysłaniem. Dane służą wyłącznie do diagnostyki i nie są używane do śledzenia Cię między aplikacjami.</p>
@@ -68,8 +68,8 @@
 
         <h2>2. Local data and optional encrypted backup</h2>
         <p>Echo is an emotion journal. Your entries (moods, notes, triggers, settings and custom categories) are stored locally on your device in the app's encrypted storage.</p>
-        <p>If you enable the Premium encrypted cloud backup feature, the app encrypts a snapshot on your device before upload. The backup server stores only the encrypted blob, size and update date. The recovery phrase and journal content are not sent to the server.</p>
-        <p>Sign in with Apple or Google is used only to link the encrypted backup to your account. Those identity providers may process data under their own policies. In the app you can sign out or delete the backup account; deleting the backup account does not remove local data from your device.</p>
+        <p>If you sign in and choose the free account backup, the app encrypts data on your device before upload. The service stores the encrypted copy, metadata needed for syncing, and an account key protected by a server key. After sign-in on another device, the service can provide the key to the same account. It does not receive journal content or an older recovery phrase. A phrase is used only to move an earlier backup once; the previous encrypted file is then archived for 90 days.</p>
+        <p>Sign in with Apple or Google verifies your identity, links the encrypted backup to your account, and makes the account key available on your devices. Those identity providers may process data under their own policies. In the app you can sign out or delete the backup account; deleting the backup account does not remove local data from your device.</p>
 
         <h2>3. Diagnostics (Sentry)</h2>
         <p>To improve app stability we use <strong>Sentry</strong> to collect crash reports. Reports <strong>do not include the content of your entries</strong> — fields such as entries, moods, triggers and identifiers are stripped (PII scrubbing) before sending. The data is used only for diagnostics and is not used to track you across apps.</p>
