@@ -1,3 +1,4 @@
+from pathlib import Path
 import unittest
 from app_ads_full_list import merge, seller_rows, validate
 
@@ -17,6 +18,19 @@ class AppAdsTests(unittest.TestCase):
         self.assertEqual(len(seller_rows(merged)),3)
         self.assertEqual(validate(merged,full),[])
         self.assertIn('observed 2026-09-30',merged)
+    def test_captured_full_list_covers_and_preserves_deployed_sellers(self):
+        folder=Path(__file__).resolve().parent
+        source=(folder/'unity-full-list-20260930.txt').read_text()
+        baseline=(folder/'deployed-baseline-20260930.txt').read_text()
+        actual=(folder.parents[1]/'app-ads.txt').read_text()
+        self.assertEqual(len(seller_rows(source)),160)
+        self.assertEqual(len(seller_rows(baseline)),168)
+        self.assertEqual(len(seller_rows(actual)),175)
+        self.assertEqual(validate(actual,source),[])
+        self.assertEqual(validate(actual,baseline),[])
+        self.assertEqual(merge(actual,source,'2026-09-30'),actual)
+        self.assertIn('ownerdomain=macsiem.dev',actual)
+
     def test_incomplete_target_fails(self):
         self.assertEqual(len(validate('unity.com,42,DIRECT','unity.com,42,DIRECT\nexample.com,23,RESELLER')),1)
     def test_empty_and_invalid_source_rejected(self):

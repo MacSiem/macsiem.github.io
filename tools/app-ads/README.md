@@ -1,6 +1,6 @@
 # Unity app-ads.txt full-list validation
 
-Copy the complete authorized sellers list from Unity Monetization → Settings → Organization → App-ads.txt → Show full list to a local source file. Record the organization and observation date with the receipt. This source is currently pending; the existing app-ads.txt has not been changed.
+Copy the complete authorized sellers list from Unity Monetization → Settings → Organization → App-ads.txt → Show full list to a local source file. Record the organization and observation date with the receipt. Captured on 2026-09-30 from organization `maciek-sieminski-gmail-com` (7972571656487). The included `unity-full-list-20260930.txt` contains all 160 sellers; SHA-256 `aa9f182a52e93a792539f197bdd1bf4401ebb0579998f4223eeaac118985fa5e`. The new app-ads.txt contains 175 unique sellers, covers all 160 Unity entries, and preserves every one of the 168 current deployed baseline sellers (included as `deployed-baseline-20260930.txt`). Seven sellers are added, including the seventh entry absent from Unity’s six-missing preview: `sharethrough.com, UvcAx8IL, RESELLER, d53b998a7bd4ecd2`. Candidate SHA-256: `3c5e52b3ac97b98223095015d62e2c6bc88191281dfcb301b2592b2116bdad83`.
 
 From the repository root:
 
